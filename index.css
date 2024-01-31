@@ -1,0 +1,30 @@
+/*Button animations demonstration for sdf-05*/
+
+body {
+    margin: 35px;                                    /*Adds a margin of 35 pixels around the body*/
+    background-image: url("images/pexels-photo-270366.jpeg"); /*Sets the background image of the body to "images/pexels-photo-270366.jpeg".*/
+    background-size: cover; /*background-image to covers the entire body.*/
+}
+
+h2 {
+    margin:15px;        /*Adds a margin of 15 pixels around all sides of the h2 element.*/
+    color:white;
+}
+
+h1 {
+    color: whitesmoke;      
+    font-size: 15px;
+    transition: all 0.5s ease-in 0.5s;  /*Adds a transition effect to all properties with a duration of 0.5 seconds, using ease-in timing function after a delay of 0.5 seconds.*/
+    animation-name: grow;  /* Assigns the keyframe animation named "grow" to h1.*/
+    animation: grow 3s ease 0s infinite alternate; /*Defines the animation properties - using the "grow" animation, lasting 3 seconds, with an ease timing function, starting at 0 seconds, and repeating infinite times.*/
+}
+
+h1:hover {
+    color: white; /**/
+    font-size: 25px;
+}
+
+@keyframes grow { /*Grow is the key framed defined*/
+    50% {width: 100px; height: 30px; background: turquoise;} /*At the 50% mark of the animation, the width is set to 100px, height to 30px, and background color to turquoise.*/
+    100% {width: 50px; height: 100px; background: lightpink;} /*at 100% mark of the animation, the width is changed to 100px, the height to 100px and the background color to lightpink*/
+}
